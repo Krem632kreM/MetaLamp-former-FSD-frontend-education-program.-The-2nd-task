@@ -128,4 +128,36 @@
     bottom: 0
     background: url('../img/arrow_forward.svg') no-repeat
     background-position: center
+.checkbox_buttons
+  display: flex
+  flex-direction: column
+  gap: 10px
+  .label_checkbox
+    display: flex
+    .text
+      margin-left: 10px
+    .fake_1
+      position: absolute
+      content: ''
+      width: 20px
+      height: 20px
+      border: 1px solid $dark_shade_25
+      border-radius: 4px
+      background-position: center
+    .fake_2
+      position: absolute
+      content: ''
+      width: 20px
+      height: 20px
+      border: 1px solid #BC9CFF
+      border-radius: 4px
+      background: url('../img/Vector.svg') no-repeat
+      background-position: center
+      opacity: 0
+    input
+      z-index: -1
+      opacity: 0
+      &:checked ~ .fake_2
+        opacity: 1
+        
 
