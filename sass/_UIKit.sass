@@ -1,0 +1,35 @@
+.UIKit-container
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(4, 1fr)
+  gap: 126px
+  margin-top: 143px
+  margin-right: 141px
+  margin-bottom: 131px
+  margin-left: 140px
+  &__block
+    display: grid
+    gap: 20px
+
+.text_field
+  width: 320px
+  height: 44px
+  border-radius: 4px
+  border: 1px solid $dark_shade_25
+  display: flex
+  align-items: center
+  input
+    outline: 0
+    border: none
+    width: 290px
+    font-family: 'Montserrat'
+    margin-left: 15px
+    padding-top: 0
+    padding-right: 0
+    padding-bottom: 0
+    padding-left: 0
+    color: $dark_shade_75
+    &::-webkit-input-placeholder
+      color: $dark_shade_25
+  &:hover
+    border: 1px solid $dark_shade_50
