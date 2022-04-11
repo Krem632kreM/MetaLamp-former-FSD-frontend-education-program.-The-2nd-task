@@ -159,5 +159,47 @@
       opacity: 0
       &:checked ~ .fake_2
         opacity: 1
-        
 
+.radio_buttons
+  display: flex
+  flex-direction: row
+  gap: 20px
+  &__item
+    display: flex
+    .text
+      margin-left: 10px
+    .fake_1
+      position: absolute
+      content: ''
+      width: 20px
+      height: 20px
+      border: 1px solid $dark_shade_25
+      border-radius: 100%
+      background-position: center      
+    .fake_2
+      position: absolute
+      content: ''
+      width: 20px
+      height: 20px
+      border: 1px solid #BC9CFF
+      border-radius: 100%
+      background-position: center
+      opacity: 0
+      &::after
+        position: absolute
+        content: ''
+        width: 12px
+        height: 12px
+        border-radius: 100%
+        background: linear-gradient(180deg, $purple, #8BA4F9)
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-position: center
+        opacity: 0
+    input
+      opacity: 0
+      &:checked ~ .fake_2
+        opacity: 1
+      &:checked ~ .fake_2::after
+        opacity: 1
