@@ -376,4 +376,76 @@ body {
   width: 210px;
   margin-left: 10px;
 }
+
+.like_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.like_button .inactive .border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: '';
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 33, 65, 0.25);
+  border-radius: 50px / 50px;
+}
+
+.like_button .inactive .border .digit {
+  font-size: 10px;
+  color: rgba(31, 33, 65, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 2px;
+}
+
+.like_button .inactive .border .pic {
+  background: url("../img/favorite_border.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+}
+
+.like_button .active .border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: '';
+  width: 40px;
+  height: 20px;
+  border: 1px solid #BC9CFF;
+  border-radius: 50px / 50px;
+}
+
+.like_button .active .border .digit {
+  font-size: 10px;
+  color: #BC9CFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 2px;
+}
+
+.like_button .active .border .pic {
+  background: url("../img/like.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+}
 /*# sourceMappingURL=style.css.map */
