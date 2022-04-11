@@ -203,3 +203,44 @@
         opacity: 1
       &:checked ~ .fake_2::after
         opacity: 1
+
+.toggle
+  display: flex
+  .inactive
+    .border
+      content: ''
+      width: 40px
+      height: 20px
+      border: 1px solid $dark_shade_25
+      border-radius: 50px / 50px
+    .round
+      content: ''
+      width: 12px
+      height: 12px
+      border-radius: 100%
+      background: $dark_shade_25
+      top: 50%
+      left: 50%
+      transform: translate(4px, 4px)
+
+  .active
+    .border
+      content: ''
+      width: 40px
+      height: 20px
+      border: 1px solid $purple
+      border-radius: 50px / 50px
+
+    .round
+      content: ''
+      width: 12px
+      height: 12px
+      border-radius: 100%
+      background: linear-gradient(180deg, $purple, #8BA4F9)
+      top: 50%
+      left: 50%
+      transform: translate(24px, 4px)
+  .text
+    width: 210px
+    margin-left: 10px
+

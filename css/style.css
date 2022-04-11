@@ -324,4 +324,56 @@ body {
 .radio_buttons__item input:checked ~ .fake_2::after {
   opacity: 1;
 }
+
+.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.toggle .inactive .border {
+  content: '';
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 33, 65, 0.25);
+  border-radius: 50px / 50px;
+}
+
+.toggle .inactive .round {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: rgba(31, 33, 65, 0.25);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+}
+
+.toggle .active .border {
+  content: '';
+  width: 40px;
+  height: 20px;
+  border: 1px solid #BC9CFF;
+  border-radius: 50px / 50px;
+}
+
+.toggle .active .round {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(180deg, #BC9CFF, #8BA4F9);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(24px, 4px);
+          transform: translate(24px, 4px);
+}
+
+.toggle .text {
+  width: 210px;
+  margin-left: 10px;
+}
 /*# sourceMappingURL=style.css.map */

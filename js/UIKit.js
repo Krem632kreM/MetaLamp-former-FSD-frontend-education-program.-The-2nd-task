@@ -1,5 +1,6 @@
 const radioButtonsBlock = document.querySelectorAll('.radio_buttons')
 const radioButtonsBlockInputs = document.querySelectorAll('.radio_buttons > .radio_buttons__item > input')
+const toggleInputs = document.querySelectorAll('.toggle > .inactive')
 
 radioButtonsBlockInputs.forEach((item, index) => {
   radioButtonsBlock.forEach((elem,i) => {
@@ -15,5 +16,11 @@ radioButtonsBlockInputs.forEach((item, index) => {
         })
       }
     })
+  })
+})
+
+toggleInputs.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('active')
   })
 })
