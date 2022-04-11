@@ -189,4 +189,17 @@ body {
   width: 320px;
   height: 44px;
 }
+
+.subscription_text_field_btn {
+  border: none;
+  content: '';
+  width: 44px;
+  height: 44px;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: url("../img/arrow_forward.svg") no-repeat;
+  background-position: center;
+}
 /*# sourceMappingURL=style.css.map */
