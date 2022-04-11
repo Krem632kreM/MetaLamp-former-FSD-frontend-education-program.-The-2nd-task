@@ -4,6 +4,16 @@ const toggleInputs = document.querySelectorAll('.toggle > .inactive')
 const likeButton = document.querySelectorAll('.like_button > .inactive')
 const rateButtonBlock = document.querySelectorAll('.rate_button')
 
+/*RANGE*/
+const rangeContainerAll = document.querySelectorAll('.range__container')
+const inputLeftAll = document.querySelectorAll('.range__container > .range__middle > .range__slider > #input-left')
+const inputRightAll = document.querySelectorAll('.range__container > .range__middle > .range__slider > #input-right')
+const trackAll = document.querySelectorAll('.range__container > .range__middle > .range__slider > .slider > .track')
+const rangeAll = document.querySelectorAll('.range__container > .range__middle > .range__slider > .slider > .range')
+const thumbLeftAll = document.querySelectorAll('.range__container > .range__middle > .range__slider > .slider > .thumb.left')
+const thumbRightAll = document.querySelectorAll('.range__container > .range__middle > .range__slider > .slider > .thumb.right')
+const rangePriceAll = document.querySelectorAll('.range__container > .range__price')
+
 
 radioButtonsBlockInputs.forEach((item, index) => {
   radioButtonsBlock.forEach((elem,i) => {
@@ -58,4 +68,23 @@ rateButtonBlock.forEach((item) => {
         }
   })
 })
+})
+
+rangeContainerAll.forEach((rangeContainer, index) => {
+
+  inputLeftAll[index].addEventListener('input', () => {
+    inputLeftAll[index].value  = Math.min(+(inputLeftAll[index].value), +(inputRightAll[index].value))
+    let percent = +(inputLeftAll[index].value)/+(inputLeftAll[index].max)*100
+    rangeAll[index].style.left = percent + '%'
+    thumbLeftAll[index].style.left = percent + '%'
+    rangePriceAll[index].textContent = inputLeftAll[index].value + '₽ - ' +  inputRightAll[index].value + '₽'
+  })
+
+  inputRightAll[index].addEventListener('input', () => {
+    inputRightAll[index].value  = Math.max(+(inputLeftAll[index].value), +(inputRightAll[index].value))
+    let percent = 100-(+(inputRightAll[index].value)/+(inputLeftAll[index].max)*100)
+    rangeAll[index].style.right = percent + '%'
+    thumbRightAll[index].style.right = percent + '%'
+    rangePriceAll[index].textContent = inputLeftAll[index].value + '₽ - ' +  inputRightAll[index].value + '₽'
+  })
 })
