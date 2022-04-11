@@ -578,13 +578,13 @@ body {
 
 .range__slider .slider .left {
   left: 33%;
-  -webkit-transform: translate(-7.5px, -5px);
-          transform: translate(-7.5px, -5px);
+  -webkit-transform: translate(-5px, -5px);
+          transform: translate(-5px, -5px);
 }
 
 .range__slider .slider .right {
   right: 33%;
-  -webkit-transform: translate(7.5px, -5px);
-          transform: translate(7.5px, -5px);
+  -webkit-transform: translate(5px, -5px);
+          transform: translate(5px, -5px);
 }
 /*# sourceMappingURL=style.css.map */
