@@ -81,3 +81,29 @@
     background: url('../img/expand_more.svg') no-repeat
     background-position: center
 
+.masked_text_field
+  width: 320px
+  height: 44px
+  border-radius: 4px
+  border: 1px solid $dark_shade_25
+  display: flex
+  align-items: center
+  z-index: 99
+  input[type=date]
+    text-transform: uppercase
+    outline: 0
+    border: none
+    width: 290px
+    font-family: 'Montserrat'
+    margin-left: 15px
+    padding-top: 0
+    padding-right: 0
+    padding-bottom: 0
+    padding-left: 0
+    color: $dark_shade_25
+    &::-webkit-calendar-picker-indicator 
+      opacity: 0
+    
+  &:hover
+    border: 1px solid $dark_shade_50
+

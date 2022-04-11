@@ -143,4 +143,40 @@ body {
   background: url("../img/expand_more.svg") no-repeat;
   background-position: center;
 }
+
+.masked_text_field {
+  width: 320px;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 33, 65, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 99;
+}
+
+.masked_text_field input[type=date] {
+  text-transform: uppercase;
+  outline: 0;
+  border: none;
+  width: 290px;
+  font-family: 'Montserrat';
+  margin-left: 15px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  color: rgba(31, 33, 65, 0.25);
+}
+
+.masked_text_field input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.masked_text_field:hover {
+  border: 1px solid rgba(31, 33, 65, 0.5);
+}
 /*# sourceMappingURL=style.css.map */
