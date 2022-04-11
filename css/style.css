@@ -179,4 +179,9 @@ body {
 .masked_text_field:hover {
   border: 1px solid rgba(31, 33, 65, 0.5);
 }
+
+.date_dropdown {
+  width: 150px;
+  height: 44px;
+}
 /*# sourceMappingURL=style.css.map */
