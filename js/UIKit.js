@@ -2,6 +2,7 @@ const radioButtonsBlock = document.querySelectorAll('.radio_buttons')
 const radioButtonsBlockInputs = document.querySelectorAll('.radio_buttons > .radio_buttons__item > input')
 const toggleInputs = document.querySelectorAll('.toggle > .inactive')
 const likeButton = document.querySelectorAll('.like_button > .inactive')
+const rateButtonBlock = document.querySelectorAll('.rate_button')
 
 
 radioButtonsBlockInputs.forEach((item, index) => {
@@ -39,4 +40,22 @@ likeButton.forEach(item => {
             item.querySelector('.digit').textContent = +(item.querySelector('.digit').textContent) -1
         }
     })
+})
+
+rateButtonBlock.forEach((item) => {
+  item.querySelectorAll('div').forEach((elem, index) => {
+
+    elem.addEventListener('click', () => {
+      for (let i=0; i<=index; i++) {
+        item.querySelectorAll('div')[i].classList.add('active')
+        item.querySelectorAll('div')[i].classList.remove('inactive')
+        
+      }
+
+      for (let i=item.querySelectorAll('div').length-1; i>index; i--) {
+        item.querySelectorAll('div')[i].classList.remove('active')
+        item.querySelectorAll('div')[i].classList.add('inactive')
+        }
+  })
+})
 })
