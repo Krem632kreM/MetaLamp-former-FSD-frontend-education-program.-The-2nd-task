@@ -43,7 +43,6 @@ likeButton.forEach(item => {
     item.addEventListener('click', () => {
         count++;
         item.classList.toggle('active')
-        console.log(item)
         if (count%2===1) {
         item.querySelector('.digit').textContent = +(item.querySelector('.digit').textContent) + 1
         } else {
@@ -70,6 +69,7 @@ rateButtonBlock.forEach((item) => {
 })
 })
 
+<<<<<<< HEAD
 
 function insertSpace(number) {
   if (Math.ceil(number/1000)>1) {
@@ -85,6 +85,12 @@ console.log(insertSpace(146))
 
 
 
+=======
+function insert(str, symbol, index) {
+  return str.substring(0, index) + symbol + str.substring(index);
+}
+
+>>>>>>> ba4b6a8fe3dfa05f41a52a63186601885ada839b
 rangeContainerAll.forEach((rangeContainer, index) => {
 
   inputLeftAll[index].addEventListener('input', () => {
@@ -92,7 +98,11 @@ rangeContainerAll.forEach((rangeContainer, index) => {
     let percent = +(inputLeftAll[index].value)/+(inputLeftAll[index].max)*100
     rangeAll[index].style.left = percent + '%'
     thumbLeftAll[index].style.left = percent + '%'
+<<<<<<< HEAD
     rangePriceAll[index].textContent = insertSpace(inputLeftAll[index].value) + '₽ - ' +  insertSpace(inputRightAll[index].value) + '₽'
+=======
+    rangePriceAll[index].textContent = insert(inputLeftAll[index].value.toString(), " ", Math.round(inputLeftAll[index].value/1000).toString().length)  + '₽ - ' +  insert(inputRightAll[index].value.toString(), " ", Math.round(inputRightAll[index].value/1000).toString().length) + '₽'
+>>>>>>> ba4b6a8fe3dfa05f41a52a63186601885ada839b
   })
 
   inputRightAll[index].addEventListener('input', () => {
@@ -100,6 +110,10 @@ rangeContainerAll.forEach((rangeContainer, index) => {
     let percent = 100-(+(inputRightAll[index].value)/+(inputLeftAll[index].max)*100)
     rangeAll[index].style.right = percent + '%'
     thumbRightAll[index].style.right = percent + '%'
+<<<<<<< HEAD
     rangePriceAll[index].textContent = insertSpace(inputLeftAll[index].value) + '₽ - ' +  insertSpace(inputRightAll[index].value) + '₽'
+=======
+    rangePriceAll[index].textContent = insert(inputLeftAll[index].value.toString(), " ", Math.round(inputLeftAll[index].value/1000).toString().length)  + '₽ - ' +  insert(inputRightAll[index].value.toString(), " ", Math.round(inputRightAll[index].value/1000).toString().length) + '₽'
+>>>>>>> ba4b6a8fe3dfa05f41a52a63186601885ada839b
   })
 })
