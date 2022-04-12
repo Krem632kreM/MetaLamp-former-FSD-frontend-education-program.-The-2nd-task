@@ -527,8 +527,8 @@ body {
 
 .range__slider input[type=range]::-webkit-slider-thumb {
   pointer-events: all;
-  width: 10px;
-  height: 10px;
+  width: 13px;
+  height: 13px;
   border-radius: 0;
   border: 0 none;
   background-color: red;

@@ -70,6 +70,21 @@ rateButtonBlock.forEach((item) => {
 })
 })
 
+
+function insertSpace(number) {
+  if (Math.ceil(number/1000)>1) {
+  return number.toString().substring(0, Math.round(number/1000).toString().length) + " " + number.toString().substring(Math.round(number/1000).toString().length);
+  }
+  else {
+    return number
+  }
+}
+
+console.log(insertSpace(12365))
+console.log(insertSpace(146))
+
+
+
 rangeContainerAll.forEach((rangeContainer, index) => {
 
   inputLeftAll[index].addEventListener('input', () => {
@@ -77,7 +92,7 @@ rangeContainerAll.forEach((rangeContainer, index) => {
     let percent = +(inputLeftAll[index].value)/+(inputLeftAll[index].max)*100
     rangeAll[index].style.left = percent + '%'
     thumbLeftAll[index].style.left = percent + '%'
-    rangePriceAll[index].textContent = inputLeftAll[index].value + '₽ - ' +  inputRightAll[index].value + '₽'
+    rangePriceAll[index].textContent = insertSpace(inputLeftAll[index].value) + '₽ - ' +  insertSpace(inputRightAll[index].value) + '₽'
   })
 
   inputRightAll[index].addEventListener('input', () => {
@@ -85,6 +100,6 @@ rangeContainerAll.forEach((rangeContainer, index) => {
     let percent = 100-(+(inputRightAll[index].value)/+(inputLeftAll[index].max)*100)
     rangeAll[index].style.right = percent + '%'
     thumbRightAll[index].style.right = percent + '%'
-    rangePriceAll[index].textContent = inputLeftAll[index].value + '₽ - ' +  inputRightAll[index].value + '₽'
+    rangePriceAll[index].textContent = insertSpace(inputLeftAll[index].value) + '₽ - ' +  insertSpace(inputRightAll[index].value) + '₽'
   })
 })
