@@ -578,13 +578,182 @@ body {
 
 .range__slider .slider .left {
   left: 33%;
-  -webkit-transform: translate(-5px, -5px);
-          transform: translate(-5px, -5px);
+  -webkit-transform: translate(-7px, -5px);
+          transform: translate(-7px, -5px);
 }
 
 .range__slider .slider .right {
   right: 33%;
-  -webkit-transform: translate(5px, -5px);
-          transform: translate(5px, -5px);
+  -webkit-transform: translate(7px, -5px);
+          transform: translate(7px, -5px);
+}
+
+.button_click-classic {
+  width: 99px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(180deg, #BC9CFF, #8BA4F9);
+}
+
+.button_click-classic::after {
+  content: 'CLICK ME';
+  color: #FFFF;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.button_click-light {
+  width: 99px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(180deg, #BC9CFF, #8BA4F9);
+  color: #FFFF;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.button_click-border {
+  --border-width: 2px;
+  --border-radius: 22px;
+  font: inherit;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(180deg, #BC9CFF, #8BA4F9);
+  border: none;
+  width: 99px;
+  height: 44px;
+  color: #BC9CFF;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  position: relative;
+  border-radius: var(--border-radius);
+  z-index: 1;
+}
+
+.button_click-border::before {
+  content: '';
+  display: block;
+  height: calc(100% - calc(var(--border-width)*2));
+  width: calc(100% - calc(var(--border-width)*2));
+  background: white;
+  position: absolute;
+  top: var(--border-width);
+  left: var(--border-width);
+  border-radius: calc(var(--border-radius) - var(--border-width));
+  z-index: -1;
+}
+
+.button_click-border_light {
+  --border-width: 2px;
+  --border-radius: 22px;
+  font: inherit;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 0.5)), to(rgba(139, 164, 249, 0.5)));
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5), rgba(139, 164, 249, 0.5));
+  border: none;
+  width: 99px;
+  height: 44px;
+  position: absolute;
+  border-radius: var(--border-radius);
+  z-index: 0;
+}
+
+.button_click-border_light::before {
+  content: '';
+  display: block;
+  height: calc(100% - calc(var(--border-width)*2));
+  width: calc(100% - calc(var(--border-width)*2));
+  background: white;
+  position: absolute;
+  top: var(--border-width);
+  left: var(--border-width);
+  border-radius: calc(var(--border-radius) - var(--border-width));
+  z-index: -1;
+}
+
+.button_click-border_light::after {
+  content: 'CLICK ME';
+  color: #BC9CFF;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.button_click-without_border_purple {
+  background: #FFFF;
+  width: 61px;
+  height: 15px;
+  border: none;
+  color: #BC9CFF;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.button_click-without_border_gray {
+  background: #FFFF;
+  width: 61px;
+  height: 15px;
+  border: none;
+  color: rgba(31, 33, 65, 0.5);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.button_click-classic_long {
+  position: relative;
+  width: 320px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: linear-gradient(180deg, #BC9CFF, #8BA4F9);
+  color: #FFFF;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.button_click-classic_long::after {
+  position: absolute;
+  -webkit-transform: translate(113%, -32%);
+          transform: translate(113%, -32%);
+  border: none;
+  content: '';
+  width: 44px;
+  height: 44px;
+  background: url("../img/arrow_forward_whight.svg") no-repeat;
+  background-position: center;
 }
 /*# sourceMappingURL=style.css.map */
