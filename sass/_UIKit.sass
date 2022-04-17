@@ -8,7 +8,9 @@
   margin-bottom: 131px
   margin-left: 140px
   &__block
-    display: grid
+    display: flex
+    align-items: start
+    flex-direction: column
     gap: 20px
 
 .text_field
@@ -386,7 +388,13 @@
       .right
         right: 33%
         transform: translate(7px, -5px)  
-
+.button_container
+  display: grid
+  justify-content: center
+  justify-items: start
+  align-items: center
+  grid-template-columns: repeat(2)
+  gap: 10px
 .button_click
   &-classic
     width: 99px
@@ -418,13 +426,9 @@
     text-transform: uppercase
     opacity: 0.5
   &-border
-    --border-width: 2px
-    --border-radius: 22px
-    font: inherit
-    background: linear-gradient(180deg, #BC9CFF, #8BA4F9)
-    border: none
     width: 99px
     height: 44px
+    border-radius: 100rem
     color: $purple
     font-family: 'Montserrat'
     font-style: normal
@@ -432,51 +436,29 @@
     font-size: 12px
     line-height: 15px
     text-transform: uppercase
-    position: relative
-    border-radius: var(--border-radius)
-    z-index: 1
-    &::before
-      content: ''
-      display: block
-      height: calc(100% - calc(var(--border-width)*2))
-      width: calc(100% - calc(var(--border-width)*2))
-      background: white
-      position: absolute
-      top: var(--border-width)
-      left: var(--border-width)
-      border-radius: calc(var(--border-radius) - var(--border-width))
-      z-index: -1
-  &-border_light
-    --border-width: 2px
-    --border-radius: 22px
-    font: inherit
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5), rgba(139, 164, 249, 0.5))
-    border: none
+    border: solid 2px transparent
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(180deg, rgba(188, 156, 255, 1), rgba(139, 164, 249, 1))
+    background-origin: border-box
+    background-clip: content-box, border-box
+    box-shadow: 2px 1000px 1px #fff inset
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out
+  &-light_border
     width: 99px
     height: 44px
-    position: absolute
-    border-radius: var(--border-radius)
-    z-index: 0
-    &::before
-      content: ''
-      display: block
-      height: calc(100% - calc(var(--border-width)*2))
-      width: calc(100% - calc(var(--border-width)*2))
-      background: white
-      position: absolute
-      top: var(--border-width)
-      left: var(--border-width)
-      border-radius: calc(var(--border-radius) - var(--border-width))
-      z-index: -1
-    &::after
-      content: 'CLICK ME'
-      color: $purple
-      font-family: 'Montserrat'
-      font-style: normal
-      font-weight: 700
-      font-size: 12px
-      line-height: 15px
-      text-transform: uppercase
+    border-radius: 100rem
+    color: $purple
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 700
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    border: solid 2px transparent
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(180deg, rgba(188, 156, 255, 0.5), rgba(139, 164, 249, 0.5))
+    background-origin: border-box
+    background-clip: content-box, border-box
+    box-shadow: 2px 1000px 1px #fff inset
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out
   &-without_border_purple
     background: #FFFF
     width: 61px
@@ -518,6 +500,7 @@
     line-height: 15px
     text-transform: uppercase
     padding: 0
+    grid-column: 3 / 1
     &::after
       position: absolute
       transform: translate(113%, -32%)  
@@ -527,10 +510,37 @@
       height: 44px
       background: url('../img/arrow_forward_whight.svg') no-repeat
       background-position: center
-
-      
-      
-        
+.pagination_container
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+.pagination
+  ul
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0
+    li
+      height: 40px
+      width: 40px
+      line-height: 40px
+      list-style: none
+      text-align: center
+      font-weight: 400
+      font-size: 12px
+      cursor: pointer
+    .btn
+      background: linear-gradient(180deg, #6FCF97, #66D2EA)
+      border-radius: 22px
+      line-height: 50px
+    .numb
+      height: 40px
+      width: 40px
+    .active
+      background: linear-gradient(180deg, #BC9CFF, #8BA4F9)
+      border-radius: 22px
+      color: #FFFF
 
 
 
