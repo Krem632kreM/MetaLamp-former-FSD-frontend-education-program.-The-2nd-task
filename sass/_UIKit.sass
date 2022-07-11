@@ -11,7 +11,7 @@
     display: flex
     align-items: start
     flex-direction: column
-    gap: 20px
+    gap: 10px
 
 .text_field
   width: 320px
@@ -38,26 +38,74 @@
 
 .dropdown
   width: 320px
-  height: 44px
+  min-height: 44px
 
 .dropdown__list
-  top: 2.5rem
-  left: 0
-  right: 0
-  border: 1px solid #ccc
-  max-height: 10rem
-  overflow-y: auto
+  display: none
+  flex-direction: column
+  width: 318px
+  min-height: 159px
+  border: 1px solid $dark_shade_25
+  border-top: none
   border-radius: 0 0 4px 4px
-  z-index: 2
-  background-color: #fff
-  opacity: 0
+  &-item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 7px
+    padding-left: 15px
+    padding-right: 7px
+  .count
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-digit
+      width: 30px
+      height: 30px
+      display: flex
+      align-items: center
+      justify-content: center
+    &-prev
+      width: 30px
+      height: 30px
+      left: 808px
+      top: 946px
+      border: 1px solid rgba(31, 32, 65, 0.25)
+      box-sizing: border-box
+      border-radius: 22px
+      background: url('../img/minus.svg') no-repeat
+      background-position: center
+      opacity: 0.38
+      pointer-events: all
+    &-next
+      width: 30px
+      height: 30px
+      border: 1px solid rgba(31, 32, 65, 0.25)
+      box-sizing: border-box
+      border-radius: 22px
+      background: url('../img/+.svg') no-repeat
+      background-position: center
+
+  .buttons
+    display: flex
+    margin-top: auto
+    margin-bottom: 13px
+    padding-left: 15px
+    padding-right: 7px
+    position: relative
+    .apply
+      position: absolute
+      right: 10px
+      bottom: -3px
+    .clear
+      display: none
 
 .dropdown__button
   display: flex
   background-color: #fff
   border: 1px solid $dark_shade_25
   width: 100%
-  height: 44px
+  min-height: 44px
   border-radius: 4px
   cursor: pointer
   align-items: center
@@ -69,23 +117,103 @@
   justify-content: space-between
   font-family: 'Montserrat'
   color: $dark_shade_75
-  &:focus ~ .dropdown__list
-    opacity: 1
-  
+  --sq: rotate(0deg)
   &:after
     content: ''
     width: 44px
-    height: 44px
+    min-height: 44px
     right: 0
     left: 0
     top: 0
     bottom: 0
     background: url('../img/expand_more.svg') no-repeat
+    transform: var(--sq)
     background-position: center
+
+.dropdown_rooms
+  width: 266px
+  min-height: 44px
+
+.dropdown_rooms__list
+  display: block
+  flex-direction: column
+  width: 264px
+  min-height: 119px
+  border: 1px solid $dark_shade_25
+  border-top: none
+  border-radius: 0 0 4px 4px
+  &-item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 7px
+    padding-left: 15px
+    padding-right: 7px
+  .count
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-digit
+      width: 30px
+      height: 30px
+      display: flex
+      align-items: center
+      justify-content: center
+    &-prev
+      width: 30px
+      height: 30px
+      left: 808px
+      top: 946px
+      border: 1px solid rgba(31, 32, 65, 0.25)
+      box-sizing: border-box
+      border-radius: 22px
+      background: url('../img/minus.svg') no-repeat
+      background-position: center
+      opacity: 0.38
+      pointer-events: all
+    &-next
+      width: 30px
+      height: 30px
+      border: 1px solid rgba(31, 32, 65, 0.25)
+      box-sizing: border-box
+      border-radius: 22px
+      background: url('../img/+.svg') no-repeat
+      background-position: center
+
+.dropdown_rooms__button
+  display: flex
+  background-color: #ccc
+  border: 1px solid $dark_shade_25
+  width: 100%
+  min-height: 44px
+  border-radius: 4px
+  cursor: pointer
+  align-items: center
+  font-size: 14px
+  line-height: 24px
+  padding-left: 15px
+  padding-right: 0
+  padding-top: 0
+  justify-content: space-between
+  font-family: 'Montserrat'
+  color: $dark_shade_75
+  --sq: rotate(0deg)
+  &:after
+    content: ''
+    width: 44px
+    min-height: 44px
+    right: 0
+    left: 0
+    top: 0
+    bottom: 0
+    background: url('../img/expand_more.svg') no-repeat
+    transform: var(--sq)
+    background-position: center
+
 
 .masked_text_field
   width: 320px
-  height: 44px
+  min-height: 44px
   border-radius: 4px
   border: 1px solid $dark_shade_25
   display: flex
@@ -111,11 +239,11 @@
 
 .date_dropdown
   width: 150px
-  height: 44px
+  min-height: 44px
 
 .filter_date_dropdown
   width: 320px
-  height: 44px
+  min-height: 44px
 
 .subscription_text_field
   &_btn
@@ -123,7 +251,7 @@
     &:after
     content: ''
     width: 44px
-    height: 44px
+    min-height: 44px
     right: 0
     left: 0
     top: 0
@@ -142,7 +270,7 @@
       position: absolute
       content: ''
       width: 20px
-      height: 20px
+      min-height: 20px
       border: 1px solid $dark_shade_25
       border-radius: 4px
       background-position: center
@@ -150,7 +278,7 @@
       position: absolute
       content: ''
       width: 20px
-      height: 20px
+      min-height: 20px
       border: 1px solid #BC9CFF
       border-radius: 4px
       background: url('../img/Vector.svg') no-repeat
@@ -396,38 +524,10 @@
   grid-template-columns: repeat(2)
   gap: 10px
 .button_click
-  &-classic
-    width: 99px
-    height: 44px
-    border-radius: 22px
-    border: none
-    background: linear-gradient(180deg, #BC9CFF, #8BA4F9)
-    &::after
-      content: 'CLICK ME'
-      color: #FFFF
-      font-family: 'Montserrat'
-      font-style: normal
-      font-weight: 700
-      font-size: 12px
-      line-height: 15px
-      text-transform: uppercase
-  &-light
-    width: 99px
-    height: 44px
-    border-radius: 22px
-    border: none
-    background: linear-gradient(180deg, #BC9CFF, #8BA4F9)
-    color: #FFFF
-    font-family: 'Montserrat'
-    font-style: normal
-    font-weight: 700
-    font-size: 12px
-    line-height: 15px
-    text-transform: uppercase
-    opacity: 0.5
   &-border
-    width: 99px
+    min-width: 99px
     height: 44px
+    padding: 10px 20px 10px 20px
     border-radius: 100rem
     color: $purple
     font-family: 'Montserrat'
@@ -442,6 +542,34 @@
     background-clip: content-box, border-box
     box-shadow: 2px 1000px 1px #fff inset
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out
+  &-classic
+    min-width: 99px
+    height: 44px
+    padding: 10px 20px 10px 20px
+    border-radius: 22px
+    border: none
+    background: linear-gradient(180deg, #BC9CFF, #8BA4F9)
+    color: #FFFF
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 700
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+  &-light
+    width: 99px
+    height: 44px
+    border-radius: 22px
+    border: none
+    background: linear-gradient(180deg, #BC9CFF, #8BA4F9)
+    color: #FFFF
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 700
+    font-size: 12px
+    line-height: 15px
+    text-transform: uppercase
+    opacity: 0.5
   &-light_border
     width: 99px
     height: 44px
@@ -461,7 +589,7 @@
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out
   &-without_border_purple
     background: #FFFF
-    width: 61px
+    width: fit-content
     height: 15px
     border: none
     color: $purple
@@ -541,9 +669,6 @@
       background: linear-gradient(180deg, #BC9CFF, #8BA4F9)
       border-radius: 22px
       color: #FFFF
-
-
-
 
     
 

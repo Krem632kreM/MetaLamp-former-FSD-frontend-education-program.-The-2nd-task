@@ -1,0 +1,30 @@
+doctype html
+html(lang="ru") 
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Headers&Footers
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="css/style.css")
+        script(defer src="js/Headers&Footers.js")
+    body
+        header.header 
+          .header__container
+            a(href="#") 
+              img.logo(src="img/Logo.svg")
+            nav.main-nav.header__center
+              ul.main-nav__list 
+                li.main-nav__item
+                  a.main-nav__link(href="#") О нас
+                li.main-nav__item
+                  button.main-nav__dropdown_btn Услуги
+                li.main-nav__item
+                  a.main-nav__link(href="#") Вакансии
+                li.main-nav__item
+                  a.main-nav__link(href="#") Новости
+                li.main-nav__item
+                  button.main-nav__dropdown_btn Соглашения
+            button#login.main-nav__btn-sighin.button_click-border Войти
+            button#signup.main-nav__btn-sighup.button_click-classic зарегистрироваться
+
