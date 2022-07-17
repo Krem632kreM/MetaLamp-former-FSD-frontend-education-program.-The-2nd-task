@@ -2,12 +2,13 @@
 .header
   position: absolute
   width: 100%
+  background: #fff
   &__container
     display: grid
     align-items: center
     gap: 20px
     grid-template-columns: auto 1fr auto auto
-    padding: 0 140px
+    padding: 18px 140px 18px 140px
   &__center
     display: flex
     justify-content: right
@@ -52,5 +53,47 @@
       color: $dark_shade_75
       font-weight: 700
 
+.footer
+  position: absolute
+  bottom: 0px
+  width: 100%
+  background: #fff
+  &__border
+    border-top: $dark_shade_5 solid 1px
+  &-sublist
+    &__link
+      color: $dark_shade_50
+      &:focus
+        color: $dark_shade_75
+  &__container
+    padding: 0 140px 0 140px
+    
+  &__list
+    padding: 104px 0 100px 0
+    display: grid
+    grid-template-columns: 260px 143px 108px 149px 260px
+    justify-content: space-between
+
+  &__item
+    display: flex
+    flex-direction: column
+    gap: 20px
+    h3 
+      text-transform: uppercase
+      padding-bottom: 21px
+    li 
+      padding-bottom: 20px
+
+
+.copyright-bar
+    display: flex
+    justify-content: space-between
+    padding: 26px 0 26px 0
+    ul 
+      display: flex
+      gap: 20px
     
 
+
+    
+    

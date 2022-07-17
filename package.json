@@ -3,6 +3,7 @@
     "gulp-beautify": "^3.0.0",
     "gulp-html-prettify": "^0.0.1",
     "package": "^1.0.1",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "start": "^5.1.0"
   }
 }

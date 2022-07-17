@@ -16,3 +16,6 @@ logInBtn.addEventListener('click', () => {
   userName.textContent = `User Name`
   mainNav.appendChild(userName)
 })
+
+const footerSublistItemLastChild = document.querySelectorAll('.footer-sublist > li')
+footerSublistItemLastChild[footerSublistItemLastChild.length-1].style = 'padding-bottom: 0'
