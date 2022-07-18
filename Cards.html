@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/Cards.js"></script>
+    <script defer src="js/FormElements.js"></script>
+  </head>
+  <body>
+    <div class="popup" id="hotel-filter">
+      <div class="popup__container"> 
+        <h1 class="popup__title">Найдём номера под ваши пожелания</h1>
+        <div class="popup__date">
+          <div class="popup__arrival">
+            <div class="text">
+              <h3>прибытие</h3>
+            </div>
+            <div class="date">
+              <button class="dropdown__button">ДД.ММ.ГГГГ</button>
+            </div>
+          </div>
+          <div class="popup__exit">
+            <div class="text">
+              <h3>выезд</h3>
+            </div>
+            <div class="date">
+              <button class="dropdown__button">ДД.ММ.ГГГГ</button>
+            </div>
+          </div>
+        </div>
+        <div class="popup__guests">
+          <div class="text">
+            <h3>гости</h3>
+          </div>
+          <div class="guests-numbers">
+            <div class="dropdown"> 
+              <button class="dropdown__button" type="button">Сколько гостей</button>
+              <div class="dropdown__list">
+                <div class="dropdown__list-item">
+                  <h3>ВЗРОСЛЫЕ</h3>
+                  <div class="count">
+                    <div class="count-prev"></div>
+                    <h3 class="count-digit">0</h3>
+                    <div class="count-next"></div>
+                  </div>
+                </div>
+                <div class="dropdown__list-item">
+                  <h3>ДЕТИ</h3>
+                  <div class="count">
+                    <div class="count-prev"></div>
+                    <h3 class="count-digit">0</h3>
+                    <div class="count-next"></div>
+                  </div>
+                </div>
+                <div class="dropdown__list-item">
+                  <h3>МЛАДЕНЦЫ</h3>
+                  <div class="count">
+                    <div class="count-prev"></div>
+                    <h3 class="count-digit">0</h3>
+                    <div class="count-next"></div>
+                  </div>
+                </div>
+                <div class="buttons">
+                  <button class="button_click-without_border_purple clear">ОЧИСТИТЬ</button>
+                  <button class="button_click-without_border_purple apply">ПРИМЕНИТЬ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="button_click-classic_long popup__btn">подобрать номер</button>
+      </div>
+    </div>
+  </body>
+</html>

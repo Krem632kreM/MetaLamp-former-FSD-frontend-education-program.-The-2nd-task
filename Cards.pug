@@ -1,0 +1,55 @@
+doctype html
+html(lang="ru") 
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Cards
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="css/style.css")
+        script(defer src="js/Cards.js")
+        script(defer src="js/FormElements.js")
+    body
+      #hotel-filter.popup
+        .popup__container 
+          h1.popup__title Найдём номера под ваши пожелания
+          .popup__date
+            .popup__arrival
+              .text
+                h3 прибытие
+              .date
+                button.dropdown__button ДД.ММ.ГГГГ
+            .popup__exit
+              .text
+                h3 выезд
+              .date
+                button.dropdown__button ДД.ММ.ГГГГ
+          .popup__guests
+            .text
+              h3 гости
+            .guests-numbers
+              .dropdown 
+                button(type="button").dropdown__button Сколько гостей
+                .dropdown__list
+                  .dropdown__list-item
+                    h3 ВЗРОСЛЫЕ
+                    .count
+                      .count-prev
+                      h3.count-digit 0
+                      .count-next
+                  .dropdown__list-item
+                    h3 ДЕТИ
+                    .count
+                      .count-prev
+                      h3.count-digit 0
+                      .count-next
+                  .dropdown__list-item
+                    h3 МЛАДЕНЦЫ
+                    .count
+                      .count-prev
+                      h3.count-digit 0
+                      .count-next
+                  .buttons
+                    button.button_click-without_border_purple.clear ОЧИСТИТЬ
+                    button.button_click-without_border_purple.apply ПРИМЕНИТЬ
+          button.button_click-classic_long.popup__btn подобрать номер
