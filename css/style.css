@@ -66,6 +66,7 @@ a {
   border: 1px solid hsla(238deg, 35%, 19%, 0.25);
   display: flex;
   align-items: center;
+  background: #fff;
 }
 .text_field input {
   outline: 0;
@@ -99,6 +100,7 @@ a {
   border: 1px solid hsla(238deg, 35%, 19%, 0.25);
   border-top: none;
   border-radius: 0 0 4px 4px;
+  background: #fff;
 }
 .dropdown__list-item {
   display: flex;
@@ -204,6 +206,7 @@ a {
   border: 1px solid hsla(238deg, 35%, 19%, 0.25);
   border-top: none;
   border-radius: 0 0 4px 4px;
+  background: #fff;
 }
 .dropdown_rooms__list-item {
   display: flex;
@@ -250,7 +253,7 @@ a {
 
 .dropdown_rooms__button {
   display: flex;
-  background-color: #ccc;
+  background-color: #fff;
   border: 1px solid hsla(238deg, 35%, 19%, 0.25);
   width: 100%;
   min-height: 44px;
@@ -288,6 +291,7 @@ a {
   display: flex;
   align-items: center;
   z-index: 99;
+  background: #fff;
 }
 .masked_text_field input[type=date] {
   text-transform: uppercase;
@@ -537,9 +541,7 @@ a {
   height: 47.5px;
 }
 .range__price {
-  width: 102px;
-  height: 15px;
-  width: 102px;
+  width: 110px;
   height: 15px;
   left: 1125.74px;
   top: 143px;
@@ -863,6 +865,7 @@ a {
 }
 
 .footer {
+  display: none;
   position: absolute;
   bottom: 0px;
   width: 100%;
@@ -905,6 +908,26 @@ a {
   padding: 26px 0 26px 0;
 }
 .copyright-bar ul {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-mobile {
+  position: absolute;
+  bottom: 0px;
+  width: 768px;
+  height: 367px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-mobile__copyright-bar {
+  padding-top: 20px;
+}
+.footer-mobile__social-networks {
+  padding-top: 25px;
   display: flex;
   gap: 20px;
 }/*# sourceMappingURL=style.css.map */

@@ -205,7 +205,7 @@ dropdownRooms.forEach(item => {
         countDropdown = 0
       }
       elem.querySelector('.count-digit').textContent = countDropdown
-      //item.querySelector('.dropdown_rooms__button').innerHTML = `${}`
+      
 
       const countDigits = event.target.closest('.dropdown_rooms__list').querySelectorAll('.dropdown_rooms__list-item > .count > .count-digit')
 
@@ -235,10 +235,12 @@ dropdownRooms.forEach(item => {
       countDigits.forEach((item,index) => { 
         if(index===0) str += `${item.textContent} ${Bedrooms(item.textContent)}, `
         if(index===1) str += `${item.textContent} ${Beds(item.textContent)}, `
-        if(index===2) str += `${item.textContent} ${Bathrooms(item.textContent)}`
+        if(index===2) str += `<br>${item.textContent} ${Bathrooms(item.textContent)}`
       
       })
+
       console.log(str)
+      item.querySelector('.dropdown_rooms__button').innerHTML = `${str}`
     })
 
     elem.querySelector('.count-prev').addEventListener('click', () => {
