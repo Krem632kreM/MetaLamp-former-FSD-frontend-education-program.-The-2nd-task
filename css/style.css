@@ -93,9 +93,9 @@ a {
 }
 
 .dropdown__list {
-  display: none;
+  display: flex;
   flex-direction: column;
-  width: 318px;
+  width: auto;
   min-height: 159px;
   border: 1px solid hsla(238deg, 35%, 19%, 0.25);
   border-top: none;
@@ -134,6 +134,7 @@ a {
   background-position: center;
   opacity: 0.38;
   pointer-events: all;
+  cursor: pointer;
 }
 .dropdown__list .count-next {
   width: 30px;
@@ -143,6 +144,7 @@ a {
   border-radius: 22px;
   background: url("../img/+.svg") no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 .dropdown__list .buttons {
   display: flex;
@@ -156,9 +158,11 @@ a {
   position: absolute;
   right: 10px;
   bottom: -3px;
+  cursor: pointer;
 }
 .dropdown__list .buttons .clear {
   display: none;
+  cursor: pointer;
 }
 
 .dropdown__button {
@@ -937,7 +941,7 @@ a {
   position: absolute;
   width: 380px;
   min-height: 374px;
-  left: 140px;
+  left: 5px;
   background: white;
 }
 #hotel-filter .popup__container {

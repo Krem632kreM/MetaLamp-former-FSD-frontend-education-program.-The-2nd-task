@@ -4,7 +4,7 @@ const toggleInputs = document.querySelectorAll('.toggle > .inactive')
 const likeButton = document.querySelectorAll('.like_button > .inactive')
 const rateButtonBlock = document.querySelectorAll('.rate_button')
 const dropdown = document.querySelectorAll('.dropdown')
-dropdownRooms = document.querySelectorAll('.dropdown_rooms')
+const dropdownRooms = document.querySelectorAll('.dropdown_rooms')
 
 /*RANGE*/
 const rangeContainerAll = document.querySelectorAll('.range__container')
@@ -79,70 +79,118 @@ const dropdownButtonTitle = (number) => {
 }
 
 dropdown.forEach(item => {
+  let dropdownList = null;
   item.querySelector('.dropdown__button').addEventListener('click', () => {
+    const html = `
+    <div class="dropdown__list-item">
+      <h3>ВЗРОСЛЫЕ</h3>
+      <div class="count">
+        <div class="count-prev"></div>
+        <h3 class="count-digit">0</h3>
+        <div class="count-next"></div>
+      </div>
+    </div>
+    <div class="dropdown__list-item">
+      <h3>ДЕТИ</h3>
+      <div class="count">
+        <div class="count-prev"></div>
+        <h3 class="count-digit">0</h3>
+        <div class="count-next"></div>
+      </div>
+    </div>
+    <div class="dropdown__list-item">
+      <h3>МЛАДЕНЦЫ</h3>
+      <div class="count">
+        <div class="count-prev"></div>
+        <h3 class="count-digit">0</h3>
+        <div class="count-next"></div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="button_click-without_border_purple clear">ОЧИСТИТЬ</button>
+      <button class="button_click-without_border_purple apply">ПРИМЕНИТЬ</button>
+    </div>
+    `
 
-    if (item.querySelector('.dropdown__list').style.display === "flex") {
-      item.querySelector('.dropdown__list').style.display = "none"
+    if(dropdownList) {
+      console.log("сработал if")
+
+      item.removeChild(dropdownList)
       item.querySelector('.dropdown__button').style.borderRadius = '4px'
       item.querySelector('.dropdown__button').style.setProperty('--sq', 'rotate(0deg)')
-    } else {
-      item.querySelector('.dropdown__list').style.display = "flex"
-      item.querySelector('.dropdown__button').style.borderRadius = '4px 4px 0 0'
-      item.querySelector('.dropdown__button').style.setProperty('--sq', 'rotate(180deg)')
+      dropdownList = null
+      
     }
-  })
-    let countDropdownForClear = 0;
-  item.querySelectorAll('.dropdown__list > .dropdown__list-item > .count').forEach(elem => {
-    let countDropdown = 0;
+    else {
+      dropdownList = document.createElement('div')
+      dropdownList.innerHTML = html
+      dropdownList.className = 'dropdown__list'
+      item.appendChild(dropdownList)
+    
+        item.querySelector('.dropdown__button').style.borderRadius = '4px 4px 0 0'
+        item.querySelector('.dropdown__button').style.setProperty('--sq', 'rotate(180deg)')
+      }
+      console.log(document.querySelectorAll('.dropdown > .dropdown__list'))
+      console.log(item)
+      {
+        let countDropdownForClear = 0;
+    item.querySelectorAll('.dropdown__list > .dropdown__list-item > .count').forEach(elem => {
+      let countDropdown = 0;
+      console.log(item)
+    
+      elem.querySelector('.count-next').addEventListener('click', () => {
+        console.log(item)
+        console.log(elem)
+        countDropdown++
+        countDropdownForClear++
+        if (countDropdown>0) {
+          elem.querySelector('.count-prev').style.opacity = 1
+          item.querySelector('.dropdown__list > .buttons > .clear').style.display = 'block'
+          elem.querySelector('.count-prev').style.setProperty('pointer-events', 'all')
+        }
+        if (countDropdown<=0) {
+          elem.querySelector('.count-prev').style.opacity = 0.38
+          countDropdown = 0
+        }elem
+        elem.querySelector('.count-digit').textContent = countDropdown
+        item.querySelector('.dropdown__button').innerHTML = `${countDropdownForClear} ${dropdownButtonTitle(countDropdownForClear)}`
+      })
   
-    elem.querySelector('.count-next').addEventListener('click', () => {
-      countDropdown++
-      countDropdownForClear++
-      if (countDropdown>0) {
-        elem.querySelector('.count-prev').style.opacity = 1
-        item.querySelector('.dropdown__list > .buttons > .clear').style.display = 'block'
-        elem.querySelector('.count-prev').style.setProperty('pointer-events', 'all')
-      }
-      if (countDropdown<=0) {
-        elem.querySelector('.count-prev').style.opacity = 0.38
-        countDropdown = 0
-      }elem
-      elem.querySelector('.count-digit').textContent = countDropdown
-      item.querySelector('.dropdown__button').innerHTML = `${countDropdownForClear} ${dropdownButtonTitle(countDropdownForClear)}`
-    })
-
-    elem.querySelector('.count-prev').addEventListener('click', () => {
-      countDropdown--
-      countDropdownForClear--
-      if (countDropdownForClear <= 0) {
-        item.querySelector('.dropdown__list > .buttons > .clear').style.display = 'none';
-        item.querySelector('.dropdown__button').innerHTML = `Сколько гостей`
-        countDropdownForClear = 0;
-      }
-      if (countDropdown>0) {
-        elem.querySelector('.count-prev').style.opacity = 1
-        item.querySelector('.dropdown__list > .buttons > .clear').style.display = 'block'
-      }
-      if (countDropdown<=0) {
-        elem.querySelector('.count-prev').style.opacity = 0.38
-        elem.querySelector('.count-prev').style.setProperty('pointer-events', 'none')
-        countDropdown = 0
-      }
-
-      (countDropdownForClear === 0) ? item.querySelector('.dropdown__button').innerHTML = `Сколько гостей` : item.querySelector('.dropdown__button').innerHTML = `${countDropdownForClear} ${dropdownButtonTitle(countDropdownForClear)}`
-      elem.querySelector('.count-digit').textContent = countDropdown
-    })
-
-    item.querySelector('.dropdown__list > .buttons > .clear').addEventListener('click', () => {
-          countDropdownForClear = 0; 
-          countDropdown = 0;
-          elem.querySelector('.count-digit').textContent = countDropdown
-          item.querySelector('.dropdown__list > .buttons > .clear').style.display = 'none'
+      elem.querySelector('.count-prev').addEventListener('click', () => {
+        countDropdown--
+        countDropdownForClear--
+        if (countDropdownForClear <= 0) {
+          item.querySelector('.dropdown__list > .buttons > .clear').style.display = 'none';
           item.querySelector('.dropdown__button').innerHTML = `Сколько гостей`
-        })
-  })
+          countDropdownForClear = 0;
+        }
+        if (countDropdown>0) {
+          elem.querySelector('.count-prev').style.opacity = 1
+          item.querySelector('.dropdown__list > .buttons > .clear').style.display = 'block'
+        }
+        if (countDropdown<=0) {
+          elem.querySelector('.count-prev').style.opacity = 0.38
+          elem.querySelector('.count-prev').style.setProperty('pointer-events', 'none')
+          countDropdown = 0
+        }
   
+        (countDropdownForClear === 0) ? item.querySelector('.dropdown__button').innerHTML = `Сколько гостей` : item.querySelector('.dropdown__button').innerHTML = `${countDropdownForClear} ${dropdownButtonTitle(countDropdownForClear)}`
+        elem.querySelector('.count-digit').textContent = countDropdown
+      })
+  
+      item.querySelector('.dropdown__list > .buttons > .clear').addEventListener('click', () => {
+            countDropdownForClear = 0; 
+            countDropdown = 0;
+            elem.querySelector('.count-digit').textContent = countDropdown
+            item.querySelector('.dropdown__list > .buttons > .clear').style.display = 'none'
+            item.querySelector('.dropdown__button').innerHTML = `Сколько гостей`
+            elem.querySelector('.count-prev').style.opacity = 0.38
+          })
+    })
+      }
+  })
 })
+
 
 
 function insertSpace(number) {

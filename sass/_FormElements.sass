@@ -42,9 +42,9 @@
   min-height: 44px
 
 .dropdown__list
-  display: none
+  display: flex
   flex-direction: column
-  width: 318px
+  width: auto
   min-height: 159px
   border: 1px solid $dark_shade_25
   border-top: none
@@ -79,6 +79,7 @@
       background-position: center
       opacity: 0.38
       pointer-events: all
+      cursor: pointer
     &-next
       width: 30px
       height: 30px
@@ -87,6 +88,8 @@
       border-radius: 22px
       background: url('../img/+.svg') no-repeat
       background-position: center
+      cursor: pointer
+
 
   .buttons
     display: flex
@@ -99,8 +102,10 @@
       position: absolute
       right: 10px
       bottom: -3px
+      cursor: pointer
     .clear
       display: none
+      cursor: pointer
 
 .dropdown__button
   display: flex
