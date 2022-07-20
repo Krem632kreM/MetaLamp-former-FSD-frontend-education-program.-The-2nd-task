@@ -437,6 +437,7 @@ a {
 
 .toggle {
   display: flex;
+  align-items: center;
 }
 .toggle .inactive .border {
   content: "";
@@ -1110,4 +1111,63 @@ a {
 }
 #room-booking .popup__full-price .sum {
   white-space: nowrap;
+}
+
+#account-registration {
+  position: absolute;
+  width: 380px;
+  min-height: 646px;
+  left: 800px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+#account-registration .popup__container {
+  padding: 40px 30px 30px 30px;
+}
+#account-registration .popup__name {
+  margin-top: 20px;
+}
+#account-registration .popup__surname {
+  margin-top: 10px;
+}
+#account-registration .popup__sex {
+  margin-top: 10px;
+}
+#account-registration .popup__date-birth {
+  margin-top: 20px;
+}
+#account-registration .popup__date-birth .text {
+  text-transform: uppercase;
+}
+#account-registration .popup__date-birth .masked_text_field {
+  margin-top: 5px;
+}
+#account-registration .popup__login-information {
+  margin-top: 20px;
+}
+#account-registration .popup__login-information .text {
+  text-transform: uppercase;
+}
+#account-registration .popup__login-information .popup__email {
+  margin-top: 5px;
+}
+#account-registration .popup__login-information .popup__password {
+  margin-top: 10px;
+}
+#account-registration .popup__special-offers {
+  margin-top: 10px;
+}
+#account-registration .popup__btn {
+  margin-top: 20px;
+}
+#account-registration .popup__sign-in {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#account-registration .popup__sign-in .text {
+  color: #000;
 }/*# sourceMappingURL=style.css.map */

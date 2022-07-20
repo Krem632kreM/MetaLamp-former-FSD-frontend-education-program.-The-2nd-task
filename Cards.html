@@ -109,5 +109,58 @@
         <button class="button_click-classic_long popup__btn">забронировать</button>
       </div>
     </div>
+    <div class="popup" id="account-registration">
+      <div class="popup__container">
+        <h1 class="popup__title">Регистрация аккаунта</h1>
+        <div class="text_field popup__name">
+          <input type="text" placeholder="Имя">
+        </div>
+        <div class="text_field popup__surname">
+          <input type="text" placeholder="Фамилия">
+        </div>
+        <div class="radio_buttons popup__sex">
+          <label class="radio_buttons__item">
+            <input type="radio">
+            <div class="fake_1"></div>
+            <div class="fake_2"> </div>
+            <div class="text">Мужчина</div>
+          </label>
+          <label class="radio_buttons__item">
+            <input type="radio">
+            <div class="fake_1"></div>
+            <div class="fake_2"> </div>
+            <div class="text">Женщина</div>
+          </label>
+        </div>
+        <div class="popup__date-birth">
+          <h3 class="text">дата рождения</h3>
+          <div class="masked_text_field">
+            <input type="date">
+          </div>
+        </div>
+        <div class="popup__login-information">
+          <h3 class="text">данные для входа в сервис</h3>
+          <div class="text_field popup__email">
+            <input type="text" placeholder="Email">
+          </div>
+          <div class="text_field popup__password">
+            <input type="text" placeholder="Пароль">
+          </div>
+        </div>
+        <label class="toggle popup__special-offers">
+          <div class="inactive">
+            <div class="border">
+              <div class="round"></div>
+            </div>
+          </div>
+          <div class="text">Получать спецпредложения</div>
+        </label>
+        <button class="button_click-classic_long popup__btn">перейти к оплате</button>
+        <div class="popup__sign-in">
+          <div class="text">Уже есть аккаунт на Toxin</div>
+          <button class="popup__signin button_click-border" id="login">Войти</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

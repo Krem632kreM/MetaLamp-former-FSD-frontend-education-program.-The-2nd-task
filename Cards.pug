@@ -87,3 +87,45 @@ html(lang="ru")
             h2.sum 38 081₽
                 
           button.button_click-classic_long.popup__btn забронировать
+
+      #account-registration.popup
+        .popup__container
+          h1.popup__title Регистрация аккаунта
+          .text_field.popup__name
+            input(type="text" placeholder="Имя")
+          .text_field.popup__surname
+            input(type="text" placeholder="Фамилия")
+          .radio_buttons.popup__sex
+            label.radio_buttons__item
+              input(type="radio")
+              .fake_1
+              .fake_2 
+              .text Мужчина
+            label.radio_buttons__item
+              input(type="radio")
+              .fake_1
+              .fake_2 
+              .text Женщина
+          .popup__date-birth
+            h3.text дата рождения
+            .masked_text_field
+              input(type="date")
+          .popup__login-information
+            h3.text данные для входа в сервис
+            .text_field.popup__email
+              input(type="text" placeholder="Email")
+            .text_field.popup__password
+              input(type="text" placeholder="Пароль")
+          label.toggle.popup__special-offers
+            .inactive
+              .border
+                .round
+            .text Получать спецпредложения
+          button.button_click-classic_long.popup__btn перейти к оплате
+          .popup__sign-in
+            .text Уже есть аккаунт на Toxin
+            button#login.popup__signin.button_click-border Войти
+            
+
+
+
