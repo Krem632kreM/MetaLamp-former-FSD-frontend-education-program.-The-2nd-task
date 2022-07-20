@@ -657,6 +657,7 @@ a {
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
+  cursor: pointer;
   line-height: 15px;
   text-transform: uppercase;
   border: solid 2px transparent;
@@ -762,9 +763,10 @@ a {
   padding: 0;
   grid-column: 3/1;
 }
-.button_click-classic_long::after {
+.button_click-classic_long:after {
   position: absolute;
-  transform: translate(113%, -32%);
+  right: 0px;
+  top: -1px;
   border: none;
   content: "";
   width: 44px;
@@ -1185,5 +1187,37 @@ a {
   align-items: center;
 }
 #account-registration .popup__sign-in .text {
+  color: #000;
+}
+
+#sign-in.popup {
+  position: absolute;
+  width: 380px;
+  min-height: 358px;
+  top: 400px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+#sign-in.popup .popup__container {
+  padding: 40px 30px 30px 30px;
+}
+#sign-in.popup .popup__email {
+  margin-top: 20px;
+}
+#sign-in.popup .popup__password {
+  margin-top: 10px;
+}
+#sign-in.popup .popup__btn {
+  margin-top: 20px;
+}
+#sign-in.popup .popup__sign-in {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sign-in.popup .popup__sign-in .text {
   color: #000;
 }/*# sourceMappingURL=style.css.map */
