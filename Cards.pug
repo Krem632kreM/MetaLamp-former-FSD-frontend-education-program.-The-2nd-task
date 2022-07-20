@@ -32,3 +32,58 @@ html(lang="ru")
                 button(type="button").dropdown__button Сколько гостей
                 
           button.button_click-classic_long.popup__btn подобрать номер
+
+      #room-booking.popup 
+        .popup__container
+          .popup__top 
+            .popup__num-info
+              .popup__num
+                .popup__num-symbol №
+                .popup__num-room 888
+              .popup__type-room люкс
+            .popup__price
+              .popup__price-room 9 990₽
+              .popup__price-period &nbspв сутки
+          .popup__date
+            .popup__arrival
+              .text
+                h3 прибытие
+              .date
+                button.dropdown__button 19.08.2019
+            .popup__exit
+              .text
+                h3 выезд
+              .date
+                button.dropdown__button 23.08.2019
+          .popup__guests
+            .text
+              h3 гости
+            .guests-numbers
+              .dropdown 
+                button(type="button").dropdown__button Сколько гостей
+          .popup__price-details
+            .popup__price-num-days
+              span.popup__price-room 9 990₽
+              span  x 
+              span.popup__number-of-days 4
+              span.popup__title-days  суток
+            .popup__price-num-days-amount 39 960₽
+            .popup__sale 
+              .popup__title-sale Сбор за услуги: скидка
+              .popup__sum-sale &nbsp 2 179₽
+            .popup__info-sale
+              a(href="#") 
+                img.logo(src="img/info.svg")
+            .popup__sale-amount 0₽
+            .popup__additional-services-title Сбор за дополнительные услуги
+            .popup__info-sale
+              a(href="#") 
+                img.logo(src="img/info.svg")
+            .popup__additional-services-amount 300₽
+          
+          .popup__full-price
+            h2.title Итого
+            .line 
+            h2.sum 38 081₽
+                
+          button.button_click-classic_long.popup__btn забронировать
