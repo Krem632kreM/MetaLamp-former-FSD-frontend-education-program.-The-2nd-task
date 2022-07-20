@@ -948,6 +948,9 @@ a {
   min-height: 374px;
   left: 5px;
   background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 #hotel-filter .popup__container {
   padding: 40px 30px 30px 30px;
@@ -965,12 +968,14 @@ a {
   text-transform: uppercase;
 }
 #hotel-filter .popup__arrival .date {
+  margin-top: 5px;
   width: 150px;
 }
 #hotel-filter .popup__exit .text {
   text-transform: uppercase;
 }
 #hotel-filter .popup__exit .date {
+  margin-top: 5px;
   width: 150px;
 }
 #hotel-filter .popup__guests {
@@ -978,6 +983,9 @@ a {
 }
 #hotel-filter .popup__guests .text {
   text-transform: uppercase;
+}
+#hotel-filter .popup__guests .guests-numbers {
+  margin-top: 5px;
 }
 #hotel-filter .popup__btn {
   margin-top: 30px;
